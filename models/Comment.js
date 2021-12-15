@@ -11,9 +11,11 @@ Comment.init(
       autoIncrement: true,
     },
     comment_text: {
-        type: DataTypes.TEXT,
-        
-    }
+      type: DataTypes.TEXT,
+      validate: {
+        len: [4],
+      },
+    },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
